@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="style2.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <title>readUp - Ocean</title>
+
+    <link rel="stylesheet" id="smooth_slider_headcss-css" type="text/css" media="all">
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="index.html"><img style = "height:80px; width:180px;" src = cropped.png> </img></a>
+
+
+        <a href="level2.html"><button id="next">Next Stage!</button></a>
+      </div>
+    </header>
+
+    <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- <section class="buttons">
+      <h2 id="howDYF">How do you feel right now?</h2>
+          <button id="moodBtn" value="excited" onclick="logMood(this.value);">Excited</button>
+          <button id="moodBtn" value="happy" onclick="logMood(this.value);">Happy</button>
+          <button id="moodBtn" value="content" onclick="logMood(this.value);">Content</button>
+          <button id="moodBtn" value="sad" onclick="logMood(this.value);">Sad</button>
+          <button id="moodBtn" value="anxious" onclick="logMood(this.value);">Anxious</button>
+          <button id="moodBtn" value="angry" onclick="logMood(this.value);">Angry</button>
+    </section>
+
+    <section class="textbox">
+    <br>
+       <h4 id="detail">Go into more detail about why you are </h4>
+       <h2 id="p1">...</h2>
+
+      <input type="text" id="descriptionOfMood">
+    <br> <button id="submit" onclick="storeCal(); storeText(); clearText();">Submit</button>
+
+    </section> -->
+
+  <br>
+
+<!-- PATH -->
+<div id="path">
+
+        <section class="steps">
+            <button id="step1" onclick="sendAlert1()"></button>
+            <button id="step2" onclick="sendAlert2()"></button>
+            <button id="step3" onclick="sendAlert3()"></button>
+            <button id="step4" onclick="sendAlert4()"></button>
+            <button id="step5" onclick="sendAlert5()"></button>
+        </section>
+</div>
+
+<section class="textbox">
+    <button id="enterTitle">Enter the book title:</button><br>
+        <input type="text" id="title">
+        <br>
+        <section class = "dayChoices">
+          <button id="day1" onclick="storeDay(1)">Day 1</button>
+          <button id="day2" onclick="storeDay(2)">Day 2</button>
+          <button id="day3" onclick="storeDay(3)">Day 3</button>
+          <button id="day4" onclick="storeDay(4)">Day 4</button>
+          <button id="day5" onclick="storeDay(5)">Day 5</button>
+        </section>
+        <button id="submit" onclick="storeText(); clearTextArea();">Submit</button>
+</section>
+
+  </body>
+
+<br>
+
+  <script>
+
+    var date = 0;
+      function storeDay(day) {
+        date = day;
+      }
+
+      var textInputted1 = "No book entered!";
+      var textInputted2 = "No book entered!";
+      var textInputted3 = "No book entered!";
+      var textInputted4 = "No book entered!";
+      var textInputted5 = "No book entered!";
+      function storeText() {
+        if (date == 1) {
+          document.getElementById("step1").innerHTML = document.getElementById("title").value;
+        } else if (date == 2) {
+          document.getElementById("step2").innerHTML = document.getElementById("title").value;
+        } else if (date == 3) {
+          document.getElementById("step3").innerHTML = document.getElementById("title").value;
+        } else if (date == 4) {
+          document.getElementById("step4").innerHTML = document.getElementById("title").value;
+        } else if (date == 5) {
+          document.getElementById("step5").innerHTML =  document.getElementById("title").value;
+        }
+      }
+
+      function clearTextArea() {
+        document.getElementById("bookTitle").value = "";
+      }
+
+      function sendAlert1() {
+        document.getElementById("step1").innerText = textInputted1;
+      }
+
+      function sendAlert2() {
+        document.getElementById("step2").innerText = textInputted2;
+      }
+
+      function sendAlert3() {
+        document.getElementById("step3").innerText = textInputted3;;
+      }
+
+      function sendAlert4() {
+        document.getElementById("step4").innerText = textInputted4;
+      }
+
+      function sendAlert5() {
+        document.getElementById("step5").innerText = textInputted5;
+      }
+
+      function showCustomer(str) {
+        var xhttp;
+        if (str == "") {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "getcustomer.asp?q="+str, true);
+        xhttp.send();
+      }
+
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
+
+</html>

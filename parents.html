@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="style1.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <title>readUp - For Parents</title>
+
+    <link rel="stylesheet" id="smooth_slider_headcss-css" type="text/css" media="all">
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <img style = "height:80px; width:180px;" src = cropped.png> </img>
+      </div>
+    </header>
+
+    <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <h2 class = "newTitle" style = "text-align: center; font-size: 60px; margin-top: 80px;">For Parents</h2>
+
+      <h2 class = "newTitle" style = "text-align: center; font-size: 40px;">Instructions</h2>
+      <p class = "mission">
+            Has your child gotten bored of just reading? Has the iPad been the go-to solution to occupy your child?
+            Look no further than readUp, a new interactive reading game designed to promote literacy among early
+            readers. We hope that with a game-like structure, not only will your child read, they will be excited
+            about doing so.
+      </p>
+      <p class = "mission">
+            The tracking method is as follows: Either you or your child will record information for a book they
+            have spent reading 15 minutes or more in a day. Simply enter in a book title in the text box, and then
+            click on the next stamp icon in the sequence to record the information. Once your child reaches 5 stamps,
+            they will advance to the next level.
+
+      </p>
+      <h2 class = "newTitle" style = "text-align: center; font-size: 40px;">Our Mission</h2>
+      <p class = "mission">
+            Research has shown that the recommended reading time for beginners is 15-20 minutes a day,
+            and that reading comprehension is a crucial skill for development and later success in life.
+            Yet, this can be difficult to achieve in young readers who demonstrate little interest in reading.
+            At readUp, we believe that reading can, and should, be fun. Through our online interactive
+            reading tracker, we hope to promote and inspire literacy at a young age, setting children up for
+            successful lifelong learning.
+      </p>
+      <div class="buttonsNoTP">
+          <a href="level1.html"><button id="enter" value="enter">Play!</button></a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a href="index.html"><button id="enter" value="parents">Home</button></a>
+      </div>
+
+  </br>
+  </body>
+
+</br>
+
+  <script>
+      var textInputted = "";
+      function storeText() {
+        textInputted = document.getElementById("descriptionOfMood").value;
+      }
+
+      function logMood(str) {
+          var currentDate = new Date(),
+            day = currentDate.getDate(),
+            month = currentDate.getMonth() + 1,
+            year = currentDate.getFullYear();
+
+        document.getElementById("p1").innerHTML = str;
+        if (str == "excited") {
+              document.getElementById(day).style.background = "#33cc33";
+        }
+        else if (str == "happy") {
+            document.getElementById(day).style.background = "yellow";
+        }
+        else if (str == "content") {
+            document.getElementById(day).style.background = "#cc66ff";
+        }
+        else if (str == "sad") {
+            document.getElementById(day).style.background = "skyblue";
+        }
+        else if(str == "anxious") {
+            document.getElementById(day).style.background = "orange";
+        }
+        else if(str == "angry") {
+            document.getElementById(day).style.background = "red";
+        }
+      }
+
+      function storeCal() {
+        var currentDate = new Date(),
+          day = currentDate.getDate(),
+          month = currentDate.getMonth() + 1,
+          year = currentDate.getFullYear();
+      }
+
+      function clearText() {
+        document.getElementById("descriptionOfMood").value = "";
+      }
+
+      function sendAlert(day) {
+        alert(textInputted);
+      }
+
+      function showCustomer(str) {
+        var xhttp;
+        if (str == "") {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "getcustomer.asp?q="+str, true);
+        xhttp.send();
+      }
+
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
+
+</html>

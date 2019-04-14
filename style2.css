@@ -1,0 +1,369 @@
+/*Smooth Slider specific styles*/
+.smooth_slider_fouc .smooth_slider {display: none;}
+.smooth_slider div,.smooth_slider p,.smooth_slider li,.smooth_slider span,.smooth_slider img,.smooth_slider h2,.smooth_slider ul{list-style:none;background:transparent;vertical-align:baseline;}
+.smooth_slider{padding:0 5px;}
+.smooth_slider .sldr_title{margin:5px 0 10px 0;}
+.smooth_slider span{display:inline;overflow:hidden;margin: 10px auto;line-height:18px;}
+.smooth_slider .smooth_sliderb{position:relative;}
+.smooth_slider .smooth_slideri{position:absolute;}
+.smooth_slider a{text-decoration:none !important;}
+.smooth_slider h2{clear:none;display:block;padding:0px;}
+.smooth_slider p.smooth_more{margin:0;}
+.smooth_slider p.smooth_more a{text-decoration:underline !important;float:right;}
+.smooth_slider p.smooth_more a:hover{text-decoration:none;}
+
+.sldrbr{line-height:1px;}
+.sldrlink{display:block;font-size:8px;font-family:Verdana, Helvetica, sans-serif;}
+.sldrlink a{position:absolute;bottom:0;right:5px;margin:10px auto;color:#333333;}
+.sldr_clearlt{display:block;visibility:hidden;clear:left;height:0;content:".";}
+.sldr_clearrt{display:block;visibility:hidden;clear:right;height:0;content:".";}
+
+/* Overall */
+html {
+  scroll-behavior: smooth;
+}
+
+p, li, h3, h4, h5, h6 {
+  color: #4FB3F2;
+  font-family: "Raleway";
+}
+
+h1, h2 {
+  font-family: "Rochester", cursive;
+  color: #0e7abe;
+  font-size: 60px;
+}
+
+.name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  float: left;
+  font-weight: bold;
+  font-variant: small-caps;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+body {
+  background-image: url(oceanlevel.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0px;
+  min-height: 100vh;
+}
+
+body.level1{
+  background-image:url(oceanlevel.png);
+}
+
+a:link {
+  color: #4b2e83;
+  font-family: "Raleway";
+}
+
+a:hover {
+  color: #0e7abe;
+}
+
+/* Navigation Bar and Buttons */
+.navbar {
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 50%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-right {
+  float: right;
+  color: white;
+}
+
+.navbar a {
+  display: block;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #0e7abe;
+  color: white;
+}
+
+.active {
+  background-color: #0e7abe !important;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* buttons */
+.btncolor {
+  background-color: #FEDCD2;
+}
+
+button {
+  background-color: #4FB3F2;
+  color: white;
+  width: 140px;
+  font-size: 26px;
+  border-radius: 8px;
+  border: 3px solid #0e7abe;
+  height: 50px;
+}
+
+button:hover, button:active {
+  background-color: #0e7abe;
+  color: white;
+}
+
+#submit {
+  width: 100px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#p1 {
+    font-size: 36px;
+}
+
+.buttons {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.textbox {
+  text-align: center;
+  margin-left: 850px;
+  margin-top: 150px;
+}
+
+#enter {
+  font-size: 26px;
+  height: 60px;
+  width: 220px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#path {
+  margin-top: 200px;
+}
+
+.steps {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+/* steps on the path */
+.steps button {
+    list-style-type: none;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 5px;
+
+    font-size:18px;
+    color: #000000;
+    background:url(IMG_0164.png);
+    border: 0px;
+}
+
+/* aligning each button */
+#step1 {
+  position: absolute;
+  left: 100px;
+  top: 375px;
+}
+
+#step2 {
+  position: absolute;
+  left: 250px;
+  top: 325px;
+}
+
+#step3 {
+  position: absolute;
+  left: 400px;
+  top: 275px;
+}
+
+#step4 {
+  position: absolute;
+  left: 550px;
+  top: 225px;
+}
+
+#step5 {
+  position: absolute;
+  left: 700px;
+  top: 175px;
+}
+
+#step1a {
+  position: absolute;
+  left: 100px;
+  top: 375px;
+  height: 100px;
+  width: 100px;
+}
+
+#step2a {
+  position: absolute;
+  left: 250px;
+  top: 325px;
+  height: 100px;
+  width: 100px;
+}
+
+#step3a {
+  position: absolute;
+  left: 400px;
+  top: 275px;
+  height: 100px;
+  width: 100px;
+}
+
+#step4a {
+  position: absolute;
+  left: 550px;
+  top: 225px;
+  height: 100px;
+  width: 100px;
+}
+
+#step5a {
+  position: absolute;
+  left: 700px;
+  top: 175px;
+  height: 100px;
+  width: 100px;
+}
+
+/* Highlight the "current" day */
+.steps button .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+.dayChoices button {
+  margin-top: 20px;
+  height: 30px;
+  width: 65px;
+  font-size: 16px;
+}
+
+/* PHOTOS FOR HELP */
+.help {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px 0px 20px 0px;
+  background-color: #BFD8D2;
+}
+
+#helpPicL {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin: 30px;
+}
+
+#helpPicR {
+  height: 100px;
+  width: auto;
+  float: right;
+  margin: 30px;
+}
+
+/* Renee */
+.buttonsNoTP {
+ margin-top: 0px;
+ padding-bottom: 10px;
+ text-align: center;
+}
+
+.block {
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ width: 80%;
+ font-size: 25px;
+ color: #0e7abe;
+ font-family: "Futura";
+ margin-bottom: 35px;
+}
+
+.instruct {
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ width: 60%;
+ font-size: 30px;
+ color: #4FB3F2;
+ font-family: "Futura";
+ margin-bottom: 0px;
+}
+
+.mission {
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ width: 65%;
+ font-size: 20px;
+ color: #0e7abe;
+ font-family: "Raleway";
+}
+
+.center {
+ padding-top: 100px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+}
+
+.newTitle {
+ font-family: "Forma DJR Display";
+ color: #0e7abe;
+ font-size: 60px;
+}
+
+#enterTitle {
+  font-size: 20px;
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+#next {
+  align: right;
+  width: 200px;
+  margin-right: 5px;
+}
